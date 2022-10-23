@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+:root {
+  font-size: 62.5%;
+  --primary-orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --soft-medium-grey: hsla(216, 12%, 54%, 0.1);
+  --dark-blue: hsl(213, 19%, 18%);
+  --soft-very-dark-blue: hsl(216, 14%, 10%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+body {
+  font-family: "Overpass", sans-serif;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--very-dark-blue);
+  padding: 2.4rem;
+  color: var(--white);
+}
+main > .rating-card {
+  flex-direction: column;
+  padding: 2.4rem;
+  gap: 1rem;
+  border-radius: 1.5rem;
+  background-color: var(--dark-blue);
+  background-image: linear-gradient(var(--dark-blue), var(--soft-very-dark-blue));
+  max-width: 38rem;
+}
+.rating-card.survey {
+  display: flex;
+}
+.rating-card > .rating-card__star-icon {
+  width: fit-content;
+  height: fit-content;
+  padding: 2rem;
+  margin: 0 0 1rem 0;
+  border-radius: 9rem;
+  background-color: var(--soft-medium-grey);
+  background-image: url("../images/icon-star.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1.4rem;
+}
+.rating-card > .rating-card__survey {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+.text {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--light-grey);
+}
+.rating-card > .rating-card__qualify {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 1.6rem 0;
+}
+.rating-card__qualify > .qualify-item {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1.3rem 0;
+  border-radius: 9rem;
+  background-color: var(--soft-medium-grey);
+  color: var(--light-grey);
+  transition-property: background-color;
+  transition-duration: 300ms;
+  user-select: none;
+}
+.rating-card__qualify > .qualify-item:hover {
+  background-color: var(--medium-grey);
+  color: var(--white);
+}
+.rating-card__qualify > .qualify-item.active {
+  background-color: var(--primary-orange);
+  color: var(--white);
+}
+.rating-card__submit-btn {
+  height: 4rem;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  border-radius: 2rem;
+  border: 0;
+  background-color: var(--primary-orange);
+  color: var(--white);
+  transition-property: background-color;
+  transition-duration: 300ms;
+}
+.rating-card__submit-btn:hover {
+  background-color: var(--white);
+  color: var(--primary-orange);
+}
+main > .rating-card.thank-you-card {
+  display: none;
+  align-items: center;
+}
+.thank-you-card-icon {
+  width: 15rem;
+}
+.rating-resume {
+  display: inline-block;
+  padding: 1rem 1.2rem;
+  margin: 0 0 2rem 0;
+  font-size: 1.4rem;
+  border-radius: 9rem;
+  background-color: var(--soft-medium-grey);
+  color: var(--primary-orange);
+}
+.thank-you-card__title {
+  font-size: 2.4rem;
+}
+.thank-you-card__description.text {
+  text-align: center;
+  margin: 0 0 2rem 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  height: 5vh;
+  padding: 1rem 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
