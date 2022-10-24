@@ -113,7 +113,7 @@ main > .rating-card.thank-you-card {
   display: inline-block;
   width: 15rem;
   height: 12rem;
-  background-image: url("/interactive-rating-component-main/images/illustration-thank-you.svg");
+  background-image: url("../images/illustration-thank-you.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
