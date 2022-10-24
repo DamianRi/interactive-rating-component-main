@@ -30,18 +30,18 @@ main > .rating-card {
   flex-direction: column;
   padding: 2.4rem;
   gap: 1rem;
-  border-radius: 1.5rem;
+  border-radius: 2.4rem;
   background-color: var(--dark-blue);
   background-image: linear-gradient(var(--dark-blue), var(--soft-very-dark-blue));
   max-width: 38rem;
+  height: 34rem;
 }
 .rating-card.survey {
   display: flex;
 }
 .rating-card > .rating-card__star-icon {
-  width: fit-content;
-  height: fit-content;
-  padding: 2rem;
+  width: 4rem;
+  height: 4rem;
   margin: 0 0 1rem 0;
   border-radius: 9rem;
   background-color: var(--soft-medium-grey);
@@ -67,10 +67,10 @@ main > .rating-card {
 }
 .rating-card__qualify > .qualify-item {
   display: inline-block;
-  width: 4rem;
-  height: 4rem;
+  width: 4.2rem;
+  height: 4.2rem;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   padding: 1.3rem 0;
   border-radius: 9rem;
@@ -90,7 +90,6 @@ main > .rating-card {
 }
 .rating-card__submit-btn {
   height: 4rem;
-  margin: 0 0 1rem 0;
   font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -110,13 +109,19 @@ main > .rating-card.thank-you-card {
   display: none;
   align-items: center;
 }
-.thank-you-card-icon {
+.thank-you-card-img {
+  display: inline-block;
   width: 15rem;
+  height: 12rem;
+  background-image: url("/interactive-rating-component-main/images/illustration-thank-you.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .rating-resume {
   display: inline-block;
-  padding: 1rem 1.2rem;
-  margin: 0 0 2rem 0;
+  padding: 0.75rem 1.6rem;
+  margin: 0 0 1rem 0;
   font-size: 1.4rem;
   border-radius: 9rem;
   background-color: var(--soft-medium-grey);
@@ -127,7 +132,6 @@ main > .rating-card.thank-you-card {
 }
 .thank-you-card__description.text {
   text-align: center;
-  margin: 0 0 2rem 0;
 }
 
 .attribution {
@@ -138,4 +142,10 @@ main > .rating-card.thank-you-card {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width:600px)  {
+  .thank-you-card__description.text {
+    padding: 0.75rem;
+  }
 }
